@@ -1,5 +1,13 @@
 'use strict';
 
 function collectSameElements(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  var results = new Set();
+  collectionA.forEach(element1 => {
+    objectB.value.forEach(element2 => {
+      if(element1.key == element2){
+        results.add(element1.key)
+      }
+    })
+  });
+  return Array.from(results);
 }
